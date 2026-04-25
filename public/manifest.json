@@ -1,0 +1,43 @@
+{
+  "name": "STEFU - Live With Stefan",
+  "short_name": "STEFU",
+  "description": "Experience the life of Finland's legendary figure. Exclusive content, unfiltered moments, and an inside look at Stefan Therman.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#C9A85D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "lifestyle"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Watch Live",
+      "url": "/#live",
+      "description": "Watch Stefan's live stream"
+    },
+    {
+      "name": "Moments",
+      "url": "/#moments",
+      "description": "Quick viral moments"
+    },
+    {
+      "name": "Join Premium",
+      "url": "/#premium",
+      "description": "Join the Inner Circle"
+    }
+  ]
+}
