@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>STEFU</title>
+    <link>https://stefu.com</link>
+    <description>Latest content from Stefan</description>
+    <language>en</language>
+    <atom:link href="https://stefu.com/rss.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <link>https://stefu.com/</link>
+    <guid isPermaLink="true">https://stefu.com/</guid>
+    <pubDate>Sat, 01 Aug 2026 11:58:25 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://stefu.com/moments</link>
+    <guid isPermaLink="true">https://stefu.com/moments</guid>
+    <pubDate>Sat, 01 Aug 2026 11:58:25 GMT</pubDate>
+  </item>
+  </channel>
+</rss>

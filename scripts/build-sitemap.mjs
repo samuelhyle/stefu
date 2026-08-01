@@ -66,6 +66,28 @@ ${urls
 
 writeFileSync(resolve(publicDir, 'sitemap.xml'), xml)
 
+// Generate RSS feed
+const feedItems = urls.map(u => `  <item>
+    <link>${u.loc}</link>
+    <guid isPermaLink="true">${u.loc}</guid>
+    <pubDate>${new Date().toUTCString()}</pubDate>
+  </item>`).join('\n')
+
+const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>STEFU</title>
+    <link>${siteUrl}</link>
+    <description>Latest content from Stefan</description>
+    <language>en</language>
+    <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml"/>
+${feedItems}
+  </channel>
+</rss>`
+
+writeFileSync(resolve(publicDir, 'rss.xml'), rss)
+console.log('[rss] wrote RSS feed')
+
 const robots = `User-agent: *
 Allow: /
 Disallow: /admin

@@ -3,14 +3,16 @@ import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 export default [
   {
     ignores: ['dist/**', 'node_modules/**', 'game/**', 'public/**', '.vercel/**'],
   },
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ['src/**/*.{js,jsx}', 'scripts/**/*.{js,mjs}'],
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'scripts/**/*.{js,mjs}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -47,12 +49,14 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       'react-hooks/set-state-in-effect': 'off',
       'react-hooks/immutability': 'off',
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-empty-object-type': 'off',
       'no-empty': ['warn', { allowEmptyCatch: true }],
     },
   },
   {
-    files: ['**/*.test.{js,jsx}', 'src/test/**/*.{js,jsx}'],
+    files: ['**/*.test.{js,jsx,ts,tsx}', 'src/test/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
         ...globals.browser,
